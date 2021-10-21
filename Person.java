@@ -37,7 +37,6 @@ public class Person implements Runnable{
       try{Elevator.done.acquire();} catch(InterruptedException e){e.printStackTrace();} //wait here until group is done
       Elevator.done.release();//Each thread in the group will acquire and release, to then release MaxCapacity
       Elevator.maxCapacity.release();//free max Capacity 7 times.
-       
         
       }
 }
