@@ -9,13 +9,13 @@ public class Main {
 
     public static ArrayList<Person> persons = new ArrayList<>();
     public static void main(String[] args) {
-        for (int i=0;i<49;i++){
+        for (int i=0;i<49;i++){ //Creates 49 people
           persons.add(new Person(i));
           Thread t = new Thread(persons.get(i));
           t.start();
         }
         
-        Elevator lift = new Elevator();
+        Elevator lift = new Elevator(); //Creates elevator
         Thread t = new Thread(lift);
         t.start();
         
